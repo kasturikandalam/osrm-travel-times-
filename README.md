@@ -1,21 +1,19 @@
 # OSRM Travel Time Tools
 
-This repository provides tools for generating travel-time and distance matrices using the Open Source Routing Machine (OSRM).  
-It takes lists of latitude/longitude coordinates and returns tidy `pandas` DataFrames with travel times (in minutes) and distances (in kilometers), using OSRM’s `/table` and `/route` APIs.
+This repository provides lightweight tools for computing travel-time and distance measures using the Open Source Routing Machine (OSRM).  
+Given latitude/longitude coordinates, the functions return `pandas` DataFrames with road-network travel times (in minutes) and distances (in kilometers).
 
-The workflow supports both:
-- the public OSRM demo server (for small test queries), and
-- a locally hosted OSRM server (recommended for research-scale jobs).
+This version is designed for small and medium-sized research tasks using the public OSRM server. For larger research-scale jobs, batch running and using docker is recommended. 
 
 ---
 
 ## Features
 
-- Compute many-to-many travel-time matrices between sets of origin and destination points.
-- Generate one-to-one route summaries with duration and distance.
-- Handles batching/retries to avoid URL size and request limits.
-- Works with `driving`, `foot`, and `bike` profiles.
-- Returns results in standard `pandas` DataFrames for analysis.
+- Compute many-to-many travel-time matrices (`/table` API).
+- Compute pairwise origin → destination travel times (`/route` API).
+- Supports `driving`, `walking`, and `cycling` modes.
+- Returns clean `pandas` DataFrames ready for analysis.
+- No external setup required — runs entirely through the public OSRM server.
 
 ---
 
