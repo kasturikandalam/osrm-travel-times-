@@ -31,7 +31,7 @@ pip install -r requirements.txt
 
 ### Example: Travel Times Between Four Landmarks in Delhi
 
-Coordinates used:
+Coordinates used (my most visited in Delhi):
 * ISI Delhi: 28.68902, 77.20989
 * ABCOFFEE (Malviya Nagar): 28.53074, 77.21043
 * Delhi Airport (Terminal 3): 28.55616, 77.10004
